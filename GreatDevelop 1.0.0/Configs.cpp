@@ -1,7 +1,8 @@
 // ================================================== //
 // # GameServer 1.00.90 WzAG.dll					# //
-// # RMST Tornado Lite - 7.12.XX					# //
+// # GreatDevelop 1.0.0								# //
 // ================================================== //
+
 #include "StdAfx.h"
 #include "Configs.h"
 #include "Logger.h"

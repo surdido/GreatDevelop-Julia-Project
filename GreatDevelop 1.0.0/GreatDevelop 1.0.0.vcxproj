@@ -128,7 +128,7 @@
     <ClInclude Include="WzAG.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ChangeLog.txt" />
+    <None Include="Bugs.txt" />
     <None Include="Configs\GameServerCS\GameServerCS.ini" />
     <None Include="Configs\GameServerCS\GMSystem.txt" />
     <None Include="Configs\GameServerCS\IPBlock.txt" />

@@ -298,14 +298,14 @@
     <None Include="Configs\GameServer\News.txt">
       <Filter>Configs\GameServer</Filter>
     </None>
-    <None Include="ChangeLog.txt">
-      <Filter>Source</Filter>
-    </None>
     <None Include="Configs\RMST\EventTimer.dat">
       <Filter>Configs\RMST</Filter>
     </None>
     <None Include="Configs\RMST\DropSystem.ini">
       <Filter>Configs\RMST</Filter>
+    </None>
+    <None Include="Bugs.txt">
+      <Filter>Source</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>

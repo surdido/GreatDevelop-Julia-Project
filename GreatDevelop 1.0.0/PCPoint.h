@@ -1,3 +1,8 @@
+// ================================================== //
+// # GameServer 1.00.90 WzAG.dll					# //
+// # GreatDevelop 1.0.0								# //
+// ================================================== //
+
 #ifndef PCPoint_H
 #define PCPoint_H
 #include "StdAfx.h"

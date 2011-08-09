@@ -1,7 +1,8 @@
 // ================================================== //
 // # GameServer 1.00.90 WzAG.dll					# //
-// # RMST Storm & Tornado Projects 2010-2011		# //
+// # GreatDevelop 1.0.0								# //
 // ================================================== //
+
 #include "StdAfx.h"
 #ifndef MONSTER_H
 #define MONSTER_H

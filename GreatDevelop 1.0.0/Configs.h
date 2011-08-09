@@ -1,8 +1,7 @@
 // ================================================== //
 // # GameServer 1.00.90 WzAG.dll					# //
-// # RMST Tornado Lite - 7.12.XX					# //
+// # GreatDevelop 1.0.0								# //
 // ================================================== //
-
 
 #ifndef CONFIGS_H
 #define CONFIGS_H
