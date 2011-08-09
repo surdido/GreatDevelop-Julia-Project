@@ -1,0 +1,9 @@
+// ================================================== //
+// # GameServer 1.00.90 : IpBlock.txt		    # //
+// # RMST Tornado Project 2011		       	    # //
+// # http://rmsteam.org, http://mu.rmsteam.org	    # //
+// ================================================== //
+
+//You can use '*' symbol to ban IPs
+86.212.222.*
+end

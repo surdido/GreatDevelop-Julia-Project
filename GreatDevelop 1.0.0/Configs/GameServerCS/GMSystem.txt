@@ -1,0 +1,33 @@
+// ================================================== //
+// # GameServer 1.00.90 : GmSystem.txt		    # //
+// # RMST Tornado Project 2011		       	    # //
+// # http://rmsteam.org, http://mu.rmsteam.org	    # //
+// ================================================== //
+
+[GMSystem]
+IsGMSystem = 1 //0: Disable Custom GMSystem, Use DB Based; 1: Enable Custom GMSystem
+IsGMInDB = 1 //0: Disable double protect for GM, 1: Enable checking GM in SQL DataBase
+
+//  #0 - IF GM/Admin Notices : 2 you will see [GM]xXx Connected , 1 - [Administrator] xXx Connected , 0 - you will not see any connect message
+//  GM NAME - nickname of your GM (ex: DeadMan)
+//  #1 - Is /drop command (1/0)
+//  #2 - Is /gg command (1/0)
+//  #3 - Is /setzen command (1/0)
+//  #4 - Is /status command (1/0)
+//  #5 - Is /gmove command (1/0)
+//  #6 - Is /setpk command (1/0)
+//  #7 - Is /pkclear command (1/0)
+//  #8 - Is /banchar, /banacc, /unbanchar, /unbanacc commands (1/0)
+//  #9 - Is /reload command (1/0)
+//  #10 - Is /skin command (1/0)
+//  #11 - Is /banpost, /unbanpost commands (1/0)
+//  #12 - Is ! command (1/0)
+//  #13 - Is /disconnect command (1/0)
+//  #14 - Is /trace command (1/0)
+// ==========================================================================================================================================================================
+//	#0	GM NAME		#1	#2	#3	#4	#5	#6	#7	#8	#9	#10	#11	#12	#13	#14
+// ==========================================================================================================================================================================
+1
+	1	DeadMan		1	1	1	1	1	1	1	1	1	1	1	1	1	1
+	1	MaThreeX	1	1	1	1	1	1	1	1	1	1	1	1	1	1
+end

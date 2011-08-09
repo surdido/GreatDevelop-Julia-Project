@@ -1,0 +1,42 @@
+// ================================================== //
+// # GameServer 1.00.90 : ItemDropSettings.txt	    # //
+// # RMST Tornado Project 2011		       	    # //
+// # http://rmsteam.org, http://mu.rmsteam.org	    # //
+// ================================================== //
+
+// ==================================================
+// Item Drop Count
+// ==================================================
+
+// Manual:
+
+// cMin - Minimum items count
+// cMax - Maximum items count
+
+//	[0-999]	[1-100]	[1-10]
+//	Mob	%Rate	cMin	cMax
+0
+	41	10	2	3	// mob 41 had 10% chance to drop 2-3 items and 90% to drop 1 item
+end
+
+// ==================================================
+// Item Drop List
+// ==================================================
+
+// Manual:
+
+// mLvlMin, mLvlMax - Monster Level Range
+// If minLvl > maxLvl then minLvl = maxLvl
+// If minOpt > maxOpt then minOpt = maxOpt
+// If minExc > maxExc then minExc = maxExc
+// ancType -> 0 if Anc = 0 ; 5 or 10, depending on Item Ancient Type (usual 5, if 5 bugged - use 10)
+
+//	[-1/..]	[-1/..]	[1-300]	[1-300]	[1-10000]	[0-15]	[0-250]	[0-13]	[0-13]	[0-255]	[0-100]	[0-100]	[0-7]	[0-7]	[0-100]	[0-6]	[0-6]	[0-100]	[0/5/10]
+//	Map	Mob	mLvlMin	mLvlMax	%Rate		Type	Idx	minLvl	maxLvl	Dur	%Skill	%Luck	minOpt	maxOpt	%Exc	minExc	maxExc	%Anc	ancType
+1
+	-1	-1	1	300	100		12	15	0	0	0	0	0	0	0	0	0	0	0	0	//Jewel of Chaos
+	-1	-1	1	300	100		14	13	0	0	0	0	0	0	0	0	0	0	0	0	//Jewel of Bless
+	-1	-1	1	300	100		14	14	0	0	0	0	0	0	0	0	0	0	0	0	//Jewel of Soul
+	-1	-1	1	300	100		14	16	0	0	0	0	0	0	0	0	0	0	0	0	//Jewel of Life
+	-1	-1	1	300	100		14	22	0	0	0	0	0	0	0	0	0	0	0	0	//Jewel of Creation
+end
