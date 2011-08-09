@@ -1,15 +1,1 @@
-WzAG.dll
-# 1. Исправить SQL добавление
-# 2. Добавить PC Points Tick (Для выдачи поинтов в секунду)
-# 3. Перенести оставшиеся команды в ChatProtocol
-# 4. Найти все оффсеты для GSCS
-5. Duel vs Guild War (при гуилд варе, спектаторс может убивать дуелянтов)
-# 6. Moss The Gambler
-# 7. AddCommands
-8. Ware перенести и пофиксить.
-9. News % Crash
-
-Secure.dll
-1. Перенести AntiDDOS
-2. Перенести giftbox =)
-3. Перенести команды /serverinfo, /credits, и "Powered by RMSTeam: Tornado Lite http://rmsteam.org"
+1) Написать TODO:
