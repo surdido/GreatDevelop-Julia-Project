@@ -129,6 +129,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Bugs.txt" />
+    <None Include="ChangeLog.txt" />
     <None Include="Configs\GameServerCS\GameServerCS.ini" />
     <None Include="Configs\GameServerCS\GMSystem.txt" />
     <None Include="Configs\GameServerCS\IPBlock.txt" />
@@ -151,6 +152,7 @@
     <None Include="Configs\RMST\Pets.ini" />
     <None Include="Configs\RMST\PkClearGuard.ini" />
     <None Include="Configs\RMST\Skills.ini" />
+    <None Include="Great Develop 1.0.0 ReadMe.txt" />
     <None Include="TODO.txt" />
   </ItemGroup>
   <ItemGroup>

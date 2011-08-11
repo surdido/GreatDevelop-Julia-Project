@@ -235,9 +235,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="TODO.txt">
-      <Filter>Source</Filter>
-    </None>
     <None Include="Configs\RMST\AntiAFK.txt">
       <Filter>Configs\RMST</Filter>
     </None>
@@ -304,9 +301,10 @@
     <None Include="Configs\RMST\DropSystem.ini">
       <Filter>Configs\RMST</Filter>
     </None>
-    <None Include="Bugs.txt">
-      <Filter>Source</Filter>
-    </None>
+    <None Include="Bugs.txt" />
+    <None Include="TODO.txt" />
+    <None Include="ChangeLog.txt" />
+    <None Include="Great Develop 1.0.0 ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="resource.rc">

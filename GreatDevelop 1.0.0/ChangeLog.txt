@@ -4,6 +4,23 @@
 // # http://greatdevelop.ru, http://greatdevelop.ru/forum  # //
 // ========================================================= //
 
+Great Develop 1.0.1
+
+	[GS\GSCS] Drop System rewriten
+	[GS\GSCS] Golden Archer rewriten and fixed
+	[GS] Moss rewriten
+
+Great Develop 1.0.0
+
+	[GS\GSCS] PandaRing skin fixed
+	[GS\GSCS] ItemDropSetting fixed
+	[GS\GSCS] PcPoints for mobs fixed
+	[GS\GSCS] WCoins for mobs fixed
+	[GS\GSCS] News % crash fixed
+	[GS\GSCS] CloseClient crash fixed
+	[GS\GSCS] Setzen command added
+
+
 RMST Lite 7.10.Build1->Buid2
 
 	[GS] ADDED Offlike Moss The Gambler
@@ -14,14 +31,3 @@ RMST Lite 7.10.Build1
 
 	Moss The Gambler and Ware Command coming in Build2
 	[InstallPack] Project Started
-
-
-Great Develop 1.0.0
-
-	PandaRing skin fixed
-	ItemDropSetting fixed
-	PcPoints for mobs fixed
-	WCoins for mobs fixed
-	News % crash fixed
-	CloseClient crash fixed
-	Setzen command added
