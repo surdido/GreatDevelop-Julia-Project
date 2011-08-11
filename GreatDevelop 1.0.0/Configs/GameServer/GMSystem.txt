@@ -1,8 +1,8 @@
-// ================================================== //
-// # GameServer 1.00.90 : GmSystem.txt		    # //
-// # RMST Tornado Project 2011		       	    # //
-// # http://rmsteam.org, http://mu.rmsteam.org	    # //
-// ================================================== //
+// ========================================================= //
+// # GameServer 1.00.90 : GMSystem.txt		    	   # //
+// # GreatDevelop 1.0.0 2011		       	    	   # //
+// # http://greatdevelop.ru, http://greatdevelop.ru/forum  # //
+// ========================================================= //
 
 [GMSystem]
 IsGMSystem = 1 //0: Disable Custom GMSystem, Use DB Based; 1: Enable Custom GMSystem
@@ -28,6 +28,6 @@ IsGMInDB = 1 //0: Disable double protect for GM, 1: Enable checking GM in SQL Da
 //	#0	GM NAME		#1	#2	#3	#4	#5	#6	#7	#8	#9	#10	#11	#12	#13	#14
 // ==========================================================================================================================================================================
 1
-	1	DeadMan		1	1	1	1	1	1	1	1	1	1	1	1	1	1
+	1	PsychoGod	1	1	1	1	1	1	1	1	1	1	1	1	1	1
 	1	MaThreeX	1	1	1	1	1	1	1	1	1	1	1	1	1	1
 end
