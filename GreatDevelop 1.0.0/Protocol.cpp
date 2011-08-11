@@ -137,14 +137,7 @@ bool ProtocolCore (BYTE protoNum, LPBYTE aRecv, DWORD aLen, int aIndex, DWORD En
 			if(aRecv[3] == 0x01)
 			{
 				if(!IpBlock.CheckIp(aIndex))return true;
-			}
-			else
-			{
-				Log.ConsoleOutPut(1,c_Red,t_Error,"[Error L1] HackCheck [%s][%s] 0xF1 [Player used skill with not sended packet in PCShop]",
-					gObj->AccountID,gObj->Name);
-				CloseClient(gObj->m_Index);
-			}
-				
+			}				
 		}
 		break;
 	}
