@@ -7,7 +7,7 @@
 #define CONFIGS_H
 
 //#define GS90
-#define GSCS90
+#define GS90
 #define dVersion 2
 
 //Function Defines //

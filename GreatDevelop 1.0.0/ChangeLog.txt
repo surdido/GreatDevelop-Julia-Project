@@ -1,13 +1,27 @@
-// ================================================== //
-// # GameServer 1.00.90 : ChangeLog.txt		    # //
-// # RMST Tornado Lite Project 2011	 	    # //
-// # http://rmsteam.org, http://mu.rmsteam.org	    # //
-// ================================================== //
+// ========================================================= //
+// # GameServer 1.00.90 : ChangeLog.txt		    	   # //
+// # GreatDevelop 1.0.0 2011		       	    	   # //
+// # http://greatdevelop.ru, http://greatdevelop.ru/forum  # //
+// ========================================================= //
 
-7.10.Build1->Buid2
-[GS] ADDED Offlike Moss The Gambler
-[GS\GSCS] Ware command ADDED
+RMST Lite 7.10.Build1->Buid2
 
-7.10.Build1
-Moss The Gambler and Ware Command coming in Build2
-[InstallPack] Project Started
+	[GS] ADDED Offlike Moss The Gambler
+	[GS\GSCS] Ware command ADDED
+
+
+RMST Lite 7.10.Build1
+
+	Moss The Gambler and Ware Command coming in Build2
+	[InstallPack] Project Started
+
+
+Great Develop 1.0.0
+
+	PandaRing skin fixed
+	ItemDropSetting fixed
+	PcPoints for mobs fixed
+	WCoins for mobs fixed
+	News % crash fixed
+	CloseClient crash fixed
+	Setzen command added
