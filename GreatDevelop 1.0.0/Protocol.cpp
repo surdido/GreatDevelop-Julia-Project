@@ -121,7 +121,8 @@ bool ProtocolCore (BYTE protoNum, LPBYTE aRecv, DWORD aLen, int aIndex, DWORD En
 			{
 				if (moss.MossConfig.EnableMoss)
 				{
-					moss.BuyItem(aIndex,aRecv);
+					if(moss.BuyItem(aIndex,aRecv))
+						return true;
 				}
 			}
 			break;	

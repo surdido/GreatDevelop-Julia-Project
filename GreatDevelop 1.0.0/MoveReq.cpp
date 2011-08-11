@@ -45,29 +45,29 @@ void cMoveReq::MoveReqLoad()
 		int n[4];
 		char Name[50], Name2[50];
 
-		sscanf(sLineTxt, "%d %s %s %d %d %d", &n[0], &Name, &Name2, &n[1], &n[2], &n[3]);
+		sscanf(sLineTxt, "%d \"%50[^\"]\" \"%50[^\"]\" %d %d %d", &n[0], &Name, &Name2, &n[1], &n[2], &n[3]);
 
-		for(int j=0; j <= strlen(Name); j++)
-		{
-			if(Name[j] == '"')
-			{
-				for(int k=j; k<=strlen(Name); k++)
-				{
-					Name[k] = Name[k+1];
-				}
-			}
-		}
+		//for(int j=0; j <= strlen(Name); j++)
+		//{
+		//	if(Name[j] == '"')
+		//	{
+		//		for(int k=j; k<=strlen(Name); k++)
+		//		{
+		//			Name[k] = Name[k+1];
+		//		}
+		//	}
+		//}
 
-		for(int j=0; j <= strlen(Name2); j++)
-		{
-			if(Name2[j] == '"')
-			{
-				for(int k=j; k<=strlen(Name2); k++)
-				{
-					Name2[k] = Name2[k+1];
-				}
-			}
-		}
+		//for(int j=0; j <= strlen(Name2); j++)
+		//{
+		//	if(Name2[j] == '"')
+		//	{
+		//		for(int k=j; k<=strlen(Name2); k++)
+		//		{
+		//			Name2[k] = Name2[k+1];
+		//		}
+		//	}
+		//}
 
 		MoveReqInfo[MoveReqCount].Index	= n[0];				 
 		strcpy(MoveReqInfo[MoveReqCount].MapName1, Name);

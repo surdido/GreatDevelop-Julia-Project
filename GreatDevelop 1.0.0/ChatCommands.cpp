@@ -435,10 +435,22 @@ bool cChat::Move(LPOBJ gObj, char *Msg)
 			return true;
 		}
 
-		if(gObj->Level < MoveReq.MoveReqInfo[Index].Level)
-		{					 
-			MessageLog(1,  c_Red,  t_COMMANDS, gObj, "[Move] You have low level!");
-			return true;
+		int TempLvl = MoveReq.MoveReqInfo[Index].Level;
+		if(gObj->Class == 4 || gObj->Class == 3)
+		{
+			if(gObj->Level < TempLvl - ceil(TempLvl/100.0f*34))
+			{					 
+				MessageLog(1,  c_Red,  t_COMMANDS, gObj, "[Move] You have low level!");
+				return true;
+			}
+		}
+		else
+		{
+			if(gObj->Level < TempLvl)
+			{					 
+				MessageLog(1,  c_Red,  t_COMMANDS, gObj, "[Move] You have low level!");
+				return true;
+			}
 		}
 
 		gObj->Money = ZenDec;
