@@ -106,7 +106,7 @@ DWORD MainTick()
 				NumIps--;
 			}			 
 		} 
-#ifdef GS90
+#ifdef _GS
 		/* Moss The Gambler */
 		moss.MossConfig.EnableTimer && moss.MossConfig.EnableMoss ? moss.CheckTime() : moss.OpenedMoss = TRUE;	 	
 #endif	
@@ -171,7 +171,7 @@ extern "C" __declspec (dllexport) void __cdecl RMST()
 		MoveReq.MoveReqLoad();
 		
 
-		#ifdef GS90
+		#ifdef _GS
 			if(Config.Duel.Enabled)
 			{
 				g_DuelSystem.DuelCreateThread();
@@ -194,7 +194,7 @@ extern "C" __declspec (dllexport) void __cdecl RMST()
 			Utilits.HookThis((DWORD)&gObjLevelUpPointAddEx,0x00406D7F);
 		#endif
 
-		#ifdef GSCS90
+		#ifdef _GS_CS
 			Utilits.HookThis((DWORD)&ProtocolCore, 0x00403A17); 
 			Utilits.HookThis((DWORD)&ProtocolCore, 0x00403A17);
 			Utilits.HookThis((DWORD)&ProtocolCoreSend,0x00405AE7); 	 

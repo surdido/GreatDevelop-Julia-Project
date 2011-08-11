@@ -107,7 +107,7 @@ bool ProtocolCore (BYTE protoNum, LPBYTE aRecv, DWORD aLen, int aIndex, DWORD En
 			{  		
 				if(Config.Duel.Enabled)
 				{
-#ifdef GS90 
+#ifdef _GS 
 					g_DuelSystem.DuelProtocolCore(gObj, aRecv);
 					return true;
 #else 
@@ -116,7 +116,7 @@ bool ProtocolCore (BYTE protoNum, LPBYTE aRecv, DWORD aLen, int aIndex, DWORD En
 				}
 			}
 		break;
-#ifdef GS90
+#ifdef _GS
 		case 0x32:
 			{
 				if (moss.MossConfig.EnableMoss)
@@ -181,7 +181,7 @@ void cProtoFunc::PlayerConnect(LPOBJ gObj)
 	//PointShop.GetInfo(gObj->m_Index); 
 	MySQL.Execute("SELECT %s FROM Character WHERE Name = '%s'", Config.ResetColumn, gObj->Name);	 
 	AddTab[gObj->m_Index].Resets = MySQL.GetInt();
-	#ifdef GS90 
+	#ifdef _GS 
 	if(Config.Duel.Enabled)
 	{
 		if(Config.Duel.Ranking)
@@ -262,7 +262,7 @@ bool cProtoFunc::NPCTalkEx(LPOBJ gObj, int NpcId)
 {
 	bool bResult = false;
 	OBJECTSTRUCT *gObjNPC = (OBJECTSTRUCT*)OBJECT_POINTER(NpcId);
-#ifdef GS90
+#ifdef _GS
 	if (gObjNPC->Class == 479 && Config.Duel.Enabled)
 	{
 		PMSG_SEND_WINDOW aSend;

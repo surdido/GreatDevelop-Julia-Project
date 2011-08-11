@@ -120,10 +120,10 @@ WZAG_API int AGRequestData(int NoneUse,int GetType)
 	GetPrivateProfileString("Data","CheckSum","..\\data\\lang\\Jpn\\CheckSum.dat",CheckSum,256,GameServerIni);
 	GetPrivateProfileString("Data","Monster","..\\data\\Monster.txt",Monster,256,GameServerIni);
 	GetPrivateProfileString("Data","Gate","..\\data\\Gate.txt",Gate,256,GameServerIni);
-#ifdef GS90
+#ifdef _GS
 	GetPrivateProfileString("Data","MonsterSetBase","..\\data\\MonsterSetBase.txt",MonsterSetBase,256,GameServerIni);
 #endif
-#ifdef GSCS90
+#ifdef _GS_CS
 	GetPrivateProfileString("Data","MonsterSetBase","..\\data\\MonsterSetBaseCS.txt",MonsterSetBase,256,GameServerIni);
 #endif
 	GetPrivateProfileString("Data","Shop0","..\\data\\Shops\\Shop0.txt",Shop0,256,GameServerIni);

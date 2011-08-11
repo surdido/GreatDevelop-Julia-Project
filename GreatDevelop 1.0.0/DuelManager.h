@@ -3,7 +3,7 @@
 // # GreatDevelop 1.0.0								# //
 // ================================================== //
 
-#ifdef GS90
+#ifdef _GS
 #ifndef DUELSYSTEM_H
 #define DUELSYSTEM_H
 #include "Prodef.h"

@@ -6,12 +6,10 @@
 #ifndef CONFIGS_H
 #define CONFIGS_H
 
-//#define GS90
-#define GS90
 #define dVersion 2
 
 //Function Defines //
-#ifdef GS90
+#ifdef _GS
 #define RMSTGS										".\\GameServer.ini"
 #define GSSIZE										4452946
 #define GetToken									0x00402CA2
@@ -68,7 +66,7 @@
 #define gObjLevelUpPointAdd ((bool(*)(BYTE type, OBJECTSTRUCT* lpObj)) 0x0050D990) 	 
 #endif
 
-#ifdef GSCS90
+#ifdef _GS_CS
 #define RMSTGS										".\\GameServerCS.ini"
 #define GSSIZE										4689920
 #define GetToken									0x00402C02
@@ -129,7 +127,7 @@
 #define RMSTLog				".\\Log" 
 
 
-#ifdef GS90
+#ifdef _GS
 //================================================//
 // Maximum Level							      //
 //================================================//
@@ -426,7 +424,7 @@
 #define LogAdd ((void(*) (BYTE,char*,...)) 0x0040732E) 
 #endif
 
-#ifdef GSCS90
+#ifdef _GS_CS
 //================================================//
 // Maximum Level							      //
 //================================================//
@@ -692,7 +690,7 @@ public:
 	long GetInt(long Min, long Max, long Default, LPCSTR BlockName, LPCSTR ConfigName, LPCSTR FolderName);
 	char GetChar(long Min, long Max, unsigned char Default, LPCSTR BlockName, LPCSTR ConfigName, LPCSTR FolderName);
 
-	#ifdef GS90
+	#ifdef _GS
 	int EldaradoEventType;
 	int CCAllowingPlayers;
 	int BCAllowingPlayers;

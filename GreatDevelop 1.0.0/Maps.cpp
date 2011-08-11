@@ -85,7 +85,7 @@ char MapAttrName[65][24] =
 	"..\\data\\Terrain64.att",
 	"..\\data\\Terrain65.att",
 };
-#ifdef GS90
+#ifdef _GS
 void cMaps::MapInit()
 {
 	BYTE NumMaps = 65;
@@ -146,7 +146,7 @@ void cMaps::MapInit()
 }
 #endif
 
-#ifdef GSCS90
+#ifdef _GS_CS
 
 void cMaps::MapInit()
 {

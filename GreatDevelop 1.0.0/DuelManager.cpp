@@ -5,7 +5,7 @@
 
 #include "StdAfx.h"  
 #include "Configs.h"
-#ifdef GS90
+#ifdef _GS
 #include "DuelManager.h"
 #include "User.h" 
 #include "Utilits.h"

@@ -106,7 +106,7 @@ void cConfigs::LoadDuel()
 void cConfigs::LoadConfigsInGS()
 {								  	 
 
-	#ifdef GS90
+	#ifdef _GS
 	DWORD *LoreGuard = (DWORD*)GUARD_SAY;
 	char Lore[25];
 	GetPrivateProfileString("Connect","GuardSay","Don't waste my time!",Lore,25,RMSTGS);
@@ -158,7 +158,7 @@ void cConfigs::LoadConfigsInGS()
 	*(unsigned int*) GS_FEATHER_PRICE = GetInt(0, 2000000000, 180000,"JewelPrices","LochsFeatherPrice",RMSTItems);
 	*(unsigned int*) GS_BLESSPOT_PRICE = GetInt(0, 2000000000, 900000,"JewelPrices","PotionOfBlessPrice",RMSTItems);
 	*(unsigned int*) GS_SOULPOT_PRICE = GetInt(0, 2000000000, 450000,"JewelPrices","PotionOfSoulPrice",RMSTItems);
-#ifdef GS90
+#ifdef _GS
 	*(unsigned int*) GS_KUNDUN_ANC_PERCT = GetInt(0,10000,25,"Kundun","KundunDropAncRate",RMSTItems);
 	*(unsigned char*) GS_KUNDUN_ITEM_NUMB = GetChar(0,20,3,"Kundun","KundunDropItemCount",RMSTItems);
 
@@ -346,7 +346,7 @@ void cConfigs::LoadConfigsInGS()
 	*(unsigned int *) GS_PARTYEXP_3_SET = GetInt(0,5000,230,"PartyExp","SetParty3Exp",RMSTCommon);
 	*(unsigned int *) GS_PARTYEXP_4_SET = GetInt(0,5000,270,"PartyExp","SetParty4Exp",RMSTCommon);
 	*(unsigned int *) GS_PARTYEXP_5_SET  = GetInt(0,5000,300,"PartyExp","SetParty5Exp",RMSTCommon);
-#ifdef GS90
+#ifdef _GS
 	*(unsigned int*) GS_DS_PARTYEXP_2 = GetInt(0,5000,160,"DevilSquare","DevilSquarePartyExp2Players",RMSTEvents);
 	*(unsigned int*) GS_DS_PARTYEXP_3 = GetInt(0,5000,180,"DevilSquare","DevilSquarePartyExp3Players",RMSTEvents);
 	*(unsigned int*) GS_DS_PARTYEXP_4 = GetInt(0,5000,200,"DevilSquare","DevilSquarePartyExp4Players",RMSTEvents);
@@ -355,7 +355,7 @@ void cConfigs::LoadConfigsInGS()
 	*(unsigned int*) GS_DS_PARTYDIFFEXP_4 = GetInt(0,5000,270,"DevilSquare","DevilSquareSetPartyExp4Players",RMSTEvents);
 	*(unsigned int*) GS_DS_PARTYDIFFEXP_5 = GetInt(0,5000,300,"DevilSquare","DevilSquareSetPartyExp5Players",RMSTEvents);
 #endif
-#ifdef GSCS90
+#ifdef _GS_CS
 	*(unsigned int*) GSCS_LOT_MAXPRICE = GetInt(0,1000000000,300000,"CastleSiege","CSLandOfTrialMaxPayment",RMSTEvents);
 	*(unsigned char*) GSCS_LORDMIX_MAXUSE  = GetChar(0,5000,0,"CastleSiege","CSLordMixMaxUsePerDay",RMSTEvents);
 
@@ -370,7 +370,7 @@ void cConfigs::LoadConfigsInGS()
 void cConfigs::LoadFixes()
 {
 
-	#ifdef GS90
+	#ifdef _GS
 	EldaradoEventType	= GetInt(0, 1, 0,"EldaradoEvent", "EldaradoEventType", RMSTEvents);
 	CCAllowingPlayers	= GetInt(0, 2, 0,"ChaosCastle", "ChaosCastleAllowingPlayers", RMSTEvents);
 	BCAllowingPlayers	= GetInt(0, 2, 0,"BloodCastle", "BloodCastleAllowingPlayers", RMSTEvents);
@@ -528,7 +528,7 @@ void cConfigs::LoadAll()
 	LoadCommands();
 	LoadPkClearGuard();
 	DropSystem.LoadDropItems();
-#ifdef GS90
+#ifdef _GS
 	moss.LoadMoss();
 #endif
 		

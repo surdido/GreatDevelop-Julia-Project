@@ -5,7 +5,7 @@
 
 #include "StdAfx.h"
 #include "Configs.h"
-#ifdef GS90
+#ifdef _GS
 #include "MossGambler.h" 
 #include "Prodef.h"
 #include "User.h"

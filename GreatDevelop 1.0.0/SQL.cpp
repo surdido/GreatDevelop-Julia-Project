@@ -31,10 +31,10 @@ void CSQLEx::Load()
 
 	if(!this->Connect())
 	{
-#ifdef GS90
+#ifdef _GS
 		MessageBoxA(NULL,"Failed to connect!!\nCheck 'GameServer.ini'","RMST SQL Error!!",MB_OK);
 #endif
-#ifdef GSCS90
+#ifdef _GS_CS
 		MessageBoxA(NULL,"Failed to connect!!\nCheck 'GameServerCS.ini'","RMST SQL Error!!",MB_OK);
 #endif
 		::ExitProcess(0);

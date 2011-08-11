@@ -9,7 +9,7 @@
 #ifndef USER_H
 #define USER_H
 
-#ifdef GS90
+#ifdef _GS
 #define OBJECT_BASE	(*(char**)0x7A5502C)
 #define OBJECT_SIZE	0x2228
 #define OBJECT_MIN 0x1F40
@@ -17,7 +17,7 @@
 #define OBJECT_STARTUSERINDEX (OBJECT_MAX - 1000)
 #endif
 
-#ifdef GSCS90
+#ifdef _GS_CS
 #define OBJECT_BASE	(*(char**)0x3E74614)
 #define OBJECT_SIZE	0x2238
 #define OBJECT_MIN 0x9C4
@@ -809,7 +809,7 @@ typedef	struct sAddTab
 	int		Resets;
 	int		UsedSlot;
 }sAddTab;
-#ifdef GS90
+#ifdef _GS
 BOOL __cdecl gObjGameClose_Func(int aIndex);
 #endif
 void __stdcall gObjViewportPatchExecute(OBJECTSTRUCT *gObj);

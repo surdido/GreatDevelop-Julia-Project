@@ -61,7 +61,7 @@ void cFixes::ShopExeHook()
 	*(BYTE*)(ShopExcellentMod_Hook2) = 0xE9;
 }
 
-#ifdef GS90
+#ifdef _GS
 void __declspec(naked) FixNewPetDurabDown()
 {
 		_asm
@@ -88,7 +88,7 @@ void __declspec(naked) FixNewPetDurabDown()
 		}
 } 
 #endif
-#ifdef GSCS90
+#ifdef _GS_CS
 void __declspec(naked) FixNewPetDurabDown()
 {
 	_asm
@@ -119,7 +119,7 @@ void __declspec(naked) FixNewPetDurabDown()
 void cFixes::ASMFixes()
 { 
 	ShopExeHook();
-#ifdef GS90	
+#ifdef _GS	
 	/////////////////////////////////////////////////////////
 
 	BYTE IOCPResponceErrorJump[] = {0xE9, 0xC3, 0x02, 0x00, 0x00, 0x90, 0x90, 0x90, 0x90};
@@ -856,7 +856,7 @@ void cFixes::ASMFixes()
 
 #endif
 
-#ifdef GSCS90
+#ifdef _GS_CS
 	
 	/////////////////////////////////////////////////////////
 

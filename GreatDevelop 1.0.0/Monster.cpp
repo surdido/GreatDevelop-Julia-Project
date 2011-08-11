@@ -19,7 +19,7 @@ void __cdecl MonsterDie(LPOBJ lpObj, LPOBJ lpTargetObj)
 	gObjMonsterDieGiveItem(lpObj, lpTargetObj);
 }
 
-#ifdef GS90
+#ifdef _GS
 int MonsterAddAndSpawn(WORD Monster,BYTE Speed,BYTE Map,BYTE X, BYTE Y)
 {
 	int MobCount = *(DWORD *)(MonsterCount);

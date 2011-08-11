@@ -9,7 +9,7 @@
 
 int MygEventMonsterItemDrop(BYTE *b_MonsterDataAddr,BYTE *a_gObjAddr);		   
 void __cdecl MonsterDie(LPOBJ lpObjOfMonster, LPOBJ lpObjOfPlayer);	 
-#ifdef GS90
+#ifdef _GS
 int MonsterAddAndSpawn(WORD Monster,BYTE Speed,BYTE Map,BYTE X, BYTE Y);
 #endif
 #define OBJ_MAXMONSTER 7400

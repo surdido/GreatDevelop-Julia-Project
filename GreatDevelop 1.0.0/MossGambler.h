@@ -4,7 +4,7 @@
 // ================================================== //
 
 #include "User.h" 
-#ifdef GS90
+#ifdef _GS
 #ifndef MOSS_H
 #define MOSS_H 
 class Moss

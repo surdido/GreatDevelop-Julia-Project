@@ -10,7 +10,7 @@ char Message[1024];
 				   
 Logger Log;	   
 DWORD PiD;
-#ifdef GS90
+#ifdef _GS
 #define TITTLE "Great Develop Mu 1.0.0 (GS)"
 #else													   
 #define TITTLE "Great Develop Mu 1.0.0 (GS_CS)"
