@@ -22,18 +22,15 @@ public:
 private:
 	struct
 	{
+		short Map;
 		short Group;
 		short Index;
 		short RateItem;
-		short MinLvl;
-		short MaxLvl;
-		short MinOpt;
-		short MaxOpt;
-		short RateSkill;
-		short RateLuck;
-		short RateExc;
-		short MaxExcOpt;
-		short RateAnc;
+		short Level;
+		short Option;
+		short Skill;
+		short Luck;
+		short Exc;
 	}ItemsDrop[MAX_MONSTER_ID][MAX_ITEM_FOR_MONSTER];
 
 	unsigned char ArrayMaxItem[MAX_MONSTER_ID];
