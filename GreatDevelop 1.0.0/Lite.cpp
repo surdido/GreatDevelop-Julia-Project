@@ -55,6 +55,7 @@ DWORD MainTick()
 			{
 				AddTab[Index].ON_Sek = 0;
 				AddTab[Index].ON_Min++;
+				PCPoint.UpdatePoints(gObj,0,PC_ADD,PCPOINT);
 			}
 			if(AddTab[Index].ON_Min >= 60)
 			{
