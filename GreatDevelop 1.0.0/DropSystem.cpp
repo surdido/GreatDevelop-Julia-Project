@@ -79,29 +79,42 @@ bool cDropSystem::DropItem(LPOBJ mObj,LPOBJ pObj)
 	}
 
 	if(CountArrayItem == 0) return false;
-	
+
 	srand(GetTickCount());
 
-	int RandomItem = rand() % CountArrayItem;
 	int RandomValue = rand() % 100 + 1;
 
-	if (RandomValue > ItemsDrop[mObj->Class][RandomItem].RateItem) return false;
+	short RateArrayItem[MAX_ITEM_FOR_MONSTER];
+	short CountRateItem = 0;
 
-	int Level,Skill,Luck,Opt,Exc;
+	for(int j = 0; j < CountArrayItem; j++)
+	{
+		if(ItemsDrop[mObj->Class][MapArrayItem[j]].RateItem >= RandomValue)
+		{
+			RateArrayItem[CountRateItem] = MapArrayItem[j];
+			CountRateItem++;
+		}
+	}
 
-	Level	= ItemsDrop[mObj->Class][RandomItem].Level;
-	Opt		= ItemsDrop[mObj->Class][RandomItem].Option;
-	Luck	= ItemsDrop[mObj->Class][RandomItem].Luck;
-	Skill	= ItemsDrop[mObj->Class][RandomItem].Skill; 
-	Exc		= ItemsDrop[mObj->Class][RandomItem].Exc;
+	if(CountRateItem == 0) return false;
 
-	int Item = ITEMGET(ItemsDrop[mObj->Class][RandomItem].Group,ItemsDrop[mObj->Class][RandomItem].Index);
+	int RandomItem = rand() % CountRateItem;	
+
+	int Level,Skill,Luck,Opt,Exc,Group,Index;
+
+	Group	= ItemsDrop[mObj->Class][RateArrayItem[RandomItem]].Group;
+	Index	= ItemsDrop[mObj->Class][RateArrayItem[RandomItem]].Group;
+	Level	= ItemsDrop[mObj->Class][RateArrayItem[RandomItem]].Level;
+	Opt		= ItemsDrop[mObj->Class][RateArrayItem[RandomItem]].Option;
+	Luck	= ItemsDrop[mObj->Class][RateArrayItem[RandomItem]].Luck;
+	Skill	= ItemsDrop[mObj->Class][RateArrayItem[RandomItem]].Skill; 
+	Exc		= ItemsDrop[mObj->Class][RateArrayItem[RandomItem]].Exc;
+
+	int Item = ITEMGET(Group,Index);
 
 	ItemSerialCreateSend (pObj->m_Index,pObj->MapNumber,(BYTE)pObj->X,(BYTE)pObj->Y,Item,Level,0,Skill,Luck,Opt,pObj->m_Index,Exc,0);
 
-	Log.ConsoleOutPut(1,c_Green,t_DROP,"[Drop System] Near %s drop %d %d %d %d %d %d %d",
-		pObj->Name,ItemsDrop[mObj->Class][RandomItem].Group,ItemsDrop[mObj->Class][RandomItem].Index,
-		Level,Luck,Skill,Opt,Exc);
+	Log.ConsoleOutPut(1,c_Green,t_DROP,"[Drop System] Near %s drop %d %d %d %d %d %d %d",Group,Index,Level,Luck,Skill,Opt,Exc);
 
 	return true;
 } 
