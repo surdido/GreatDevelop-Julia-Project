@@ -112,9 +112,9 @@ bool cDropSystem::DropItem(LPOBJ mObj,LPOBJ pObj)
 
 	int Item = ITEMGET(Group,Index);
 
-	ItemSerialCreateSend (pObj->m_Index,pObj->MapNumber,(BYTE)pObj->X,(BYTE)pObj->Y,Item,Level,0,Skill,Luck,Opt,pObj->m_Index,Exc,0);
+	ItemSerialCreateSend (mObj->m_Index,mObj->MapNumber,(BYTE)mObj->X,(BYTE)mObj->Y,Item,Level,0,Skill,Luck,Opt,pObj->m_Index,Exc,0);
 
-	Log.ConsoleOutPut(1,c_Green,t_DROP,"[Drop System] Near %s drop %d %d %d %d %d %d %d",Group,Index,Level,Luck,Skill,Opt,Exc);
+	Log.ConsoleOutPut(1,c_Green,t_DROP,"[Drop System] [R=%d] Near %s drop %d %d %d %d %d %d %d",RandomValue,pObj->Name,Group,Index,Level,Luck,Skill,Opt,Exc);
 
 	return true;
 } 
