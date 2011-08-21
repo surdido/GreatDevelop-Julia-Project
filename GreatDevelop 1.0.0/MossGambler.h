@@ -16,6 +16,7 @@ public:
 	void LoadMainConfig();
 	void LoadItemInfo();
 	void LoadTimeConfig();
+	void DataSendMoss(int Index);
 
 	void SpawnMoss();
 	void DisappearMoss();

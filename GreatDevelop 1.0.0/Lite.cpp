@@ -75,7 +75,7 @@ DWORD MainTick()
 					if (AddTab[Index].PC_PlayerPoints < PCPoint.sPoints.MaximumPCPoints)
 					{
 						Chat.Message( Index,"[PointShop] You earned %d Points for being online!", PCPoint.sPoints.AddPCPointsCount);
-						Chat.Message( Index,"[PointShop] You have been online %d sec %d min %d hour!", AddTab[Index].ON_Sek, AddTab[Index].ON_Min, AddTab[Index].ON_Hour);
+						Chat.Message( Index,"[PointShop] You have been online %d Hour %d Minutes!", AddTab[Index].ON_Hour, AddTab[Index].ON_Min);
 					}
 					else
 					{

@@ -25,8 +25,6 @@ void cPCPoint::LoadIniConfigs()
 	sPoints.MaximumPCPoints		= (short) Config.GetInt(0, 32000,					10000,	"PCPoints",		"MaximumPCPoints",			RMSTPcPoints);
 	sPoints.AddPCPointsSec		= (short) Config.GetInt(0, 6000000,					3600,	"PCPoints",		"AddPCPointsSec",			RMSTPcPoints);
 	sPoints.AddPCPointsCount	= (short) Config.GetInt(0, sPoints.MaximumPCPoints,	10,		"PCPoints",		"AddPCPointsCount",			RMSTPcPoints);	
-	//sPoints.AddPCPointsMinLvl	= (short) Config.GetInt(0, sPoints.MaximumPCPoints,	10,		"PCPoints",		"AddPCPointsMinLvl",		RMSTPcPoints);	
-	//sPoints.AddPCPointsLevelUP	= (short) Config.GetInt(0, sPoints.MaximumPCPoints,	10,		"PCPoints",		"AddPCPointsLevelUP",		RMSTPcPoints);
 	this->LoadConfigs();
 }
 
@@ -83,9 +81,9 @@ void cPCPoint::LoadConfigs()
 		}
 	}
 	fclose(file);
-	Log.ConsoleOutPut(1,c_Green,t_PCPOINT,"[PC Point] PC Shop Item Loaded [%d]",AmountRecords[0]);
-	Log.ConsoleOutPut(1,c_Green,t_PCPOINT,"[PC Point] Total Monster Loaded [%d]",AmountRecords[1]);
-	Log.ConsoleOutPut(1,c_Blue,t_PCPOINT,"[WCoin] Total Monster Loaded [%d]",AmountRecords[2]);
+	Log.ConsoleOutPut(1,c_Cyan,t_PCPOINT,"[PC Point] PC Shop Item Loaded [%d]",AmountRecords[0]);
+	Log.ConsoleOutPut(1,c_Cyan,t_PCPOINT,"[PC Point] Total Monster Loaded [%d]",AmountRecords[1]);
+	Log.ConsoleOutPut(1,c_Cyan,t_PCPOINT,"[WCoin] Total Monster Loaded [%d]",AmountRecords[2]);
 }
 
 void cPCPoint::CreatePacketShop()
@@ -113,7 +111,7 @@ void cPCPoint::CreatePacketShop()
 		ItemInfo[9] = PCShop[i].NewOpt3;
 		ItemInfo[10] = PCShop[i].NewOpt4;
 		ItemInfo[11] = PCShop[i].NewOpt5;
-		ItemInfo[12] = 0x00;//PCShop[i].Cost;
+		ItemInfo[12] = 0x00;
 
 		PacketSize = (sizeof(ItemInfo) * (i + 1));
 		memcpy(&Packet2[PacketFlag], ItemInfo, PacketSize);
@@ -150,6 +148,7 @@ void cPCPoint::OpenShop(int Index)
 	if (this->ChekingCallInitItemsInShop == false)
 		this->InitItemShop();
 	DataSend(Index,this->PCPointPacket,this->PacketSizes);
+	Chat.Message(Index,"Quickly Open Shop"); //Очень странный фикс, но он работает :))))))))
 }
 
 int cPCPoint::gObjCalcItems(int X, int Y)
@@ -222,7 +221,6 @@ void cPCPoint::InitPCPointForPlayer(LPOBJ gObj)
 void cPCPoint::UpdatePoints(LPOBJ gObj,int CountPoints,eModeUpdate Mode,eTypePoint Type)
 {
 	int AmountPoints;
-	char MsgSend[64];
 
 	if (Type == PCPOINT)		AmountPoints = AddTab[gObj->m_Index].PC_PlayerPoints;  
 	if (Type ==  WCOIN ) 		AmountPoints = gObj->m_wCashPoint;
