@@ -64,7 +64,7 @@ void cPCPoint::LoadConfigs()
 		}
 		if (shBuff == 1)
 		{
-			sscanf(szBuf,"%d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d",&PCShop[Counter].Index,&PCShop[Counter].ID,
+			sscanf(szBuf,"%d %d %d %d %d %d %d %d %d %d %d %d %d %d",&PCShop[Counter].Index,&PCShop[Counter].ID,
 				&PCShop[Counter].Level,&PCShop[Counter].Opt,&PCShop[Counter].Luck,&PCShop[Counter].Skill,
 				&PCShop[Counter].Exc,&PCShop[Counter].Ancient,&PCShop[Counter].NewOpt1,&PCShop[Counter].NewOpt2,
 				&PCShop[Counter].NewOpt3,&PCShop[Counter].NewOpt4,&PCShop[Counter].NewOpt5,&PCShop[Counter].Cost);
