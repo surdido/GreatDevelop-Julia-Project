@@ -153,7 +153,6 @@ extern "C" __declspec (dllexport) void __cdecl RMST()
 	DWORD OldProtect;
 	if(VirtualProtect(LPVOID(0x401000), GSSIZE, PAGE_EXECUTE_READWRITE, &OldProtect))
 	{	
-		
 		//Create Log folder in GameServer
 		CreateDirectory(RMSTConsoleLogs,NULL);	
 		CreateDirectory(RMSTLog,NULL);	
@@ -171,7 +170,6 @@ extern "C" __declspec (dllexport) void __cdecl RMST()
 		IpBlock.LoadIpBlock();
 		MoveReq.MoveReqLoad();
 		
-
 		#ifdef _GS
 			if(Config.Duel.Enabled)
 			{
