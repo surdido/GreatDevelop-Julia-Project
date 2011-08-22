@@ -111,7 +111,7 @@ void cPCPoint::CreatePacketShop()
 		ItemInfo[9] = PCShop[i].NewOpt3;
 		ItemInfo[10] = PCShop[i].NewOpt4;
 		ItemInfo[11] = PCShop[i].NewOpt5;
-		ItemInfo[12] = 0x00;
+		ItemInfo[12] = PCShop[i].Cost;
 
 		PacketSize = (sizeof(ItemInfo) * (i + 1));
 		memcpy(&Packet2[PacketFlag], ItemInfo, PacketSize);

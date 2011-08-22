@@ -23,7 +23,7 @@ void cDropSystem::LoadDropItems()
 
 	if (file == NULL)
 	{
-		Log.ConsoleOutPut(1,c_Green,t_NULL,"[Drop System] Drop System Loaded");
+		Log.ConsoleOutPut(1,c_Green,t_NULL,"[Drop System] Drop System not loaded");
 		return;
 	}
 

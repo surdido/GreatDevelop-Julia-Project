@@ -677,7 +677,7 @@ bool cChat::LevelCommand(LPOBJ gObj, char *Msg)
 
 bool cChat::DropCommand(LPOBJ gObj, char *Msg)
 {					
-	if(CheckCommand(gObj, Config.Commands.IsDrop, GmSystem.cDrop, 0, 0, 0, 0, 3, 0, "Drop", "/drop <Value> <ItemCount> <ItemType> <ItemIndex> <ItemLvl> <ItemSkill> <ItemLuck> <ItemOpt> <ItemExc> <ItemAnc>", Msg))
+	if(CheckCommand(gObj, Config.Commands.IsDrop, GmSystem.cDrop, 0, 0, 0, 0, 3, 0, "Drop", "/drop <ItemCount> <ItemType> <ItemIndex> <ItemLvl> <ItemSkill> <ItemLuck> <ItemOpt> <ItemExc> <ItemAnc>", Msg))
 		return true;
 
 	int ItemCount = 0;
