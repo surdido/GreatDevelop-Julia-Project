@@ -148,7 +148,7 @@ void cPCPoint::OpenShop(int Index)
 	if (this->ChekingCallInitItemsInShop == false)
 		this->InitItemShop();
 	DataSend(Index,this->PCPointPacket,this->PacketSizes);
-	Chat.Message(Index,"Quickly Open Shop"); //Очень странный фикс, но он работает :))))))))
+	Chat.Message(Index,""); //Очень странный фикс, но он работает :))))))))
 }
 
 int cPCPoint::gObjCalcItems(int X, int Y)
