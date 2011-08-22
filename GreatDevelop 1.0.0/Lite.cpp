@@ -75,7 +75,7 @@ DWORD MainTick()
 					if (AddTab[Index].PC_PlayerPoints < PCPoint.sPoints.MaximumPCPoints)
 					{
 						Chat.Message( Index,"[PointShop] You earned %d Points for being online!", PCPoint.sPoints.AddPCPointsCount);
-						Chat.Message( Index,"[PointShop] You have been online %d sec %d min %d hour!", AddTab[Index].ON_Sek, AddTab[Index].ON_Min, AddTab[Index].ON_Hour);
+						Chat.Message( Index,"[PointShop] You have been online %d Hour %d Minutes!", AddTab[Index].ON_Hour, AddTab[Index].ON_Min);
 					}
 					else
 					{
@@ -153,7 +153,6 @@ extern "C" __declspec (dllexport) void __cdecl RMST()
 	DWORD OldProtect;
 	if(VirtualProtect(LPVOID(0x401000), GSSIZE, PAGE_EXECUTE_READWRITE, &OldProtect))
 	{	
-		
 		//Create Log folder in GameServer
 		CreateDirectory(RMSTConsoleLogs,NULL);	
 		CreateDirectory(RMSTLog,NULL);	
@@ -171,7 +170,6 @@ extern "C" __declspec (dllexport) void __cdecl RMST()
 		IpBlock.LoadIpBlock();
 		MoveReq.MoveReqLoad();
 		
-
 		#ifdef _GS
 			if(Config.Duel.Enabled)
 			{

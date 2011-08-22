@@ -18,6 +18,13 @@ Moss moss;
 #define ITEMGET(x,y) ((x)*512+(y))
 enum {OPT_LEVEL,OPT_SKILL,OPT_LUCK,OPT_ADD,OPT_EXC,OPT_ANC};
 
+struct PMSG_BUYRESULT
+{
+	PBMSG_HEAD h;	// C1:32
+	BYTE Result;	// 3
+	BYTE ItemInfo[12];	// 4
+};
+
 void MossBuyDelay(void *lparam)
 {
 	moss.g_MossDelay = true;
@@ -28,6 +35,15 @@ void MossBuyDelay(void *lparam)
 
 Moss::Moss() {}
 Moss::~Moss() {}
+
+void Moss::DataSendMoss(int Index)
+{
+	PMSG_BUYRESULT pRez;
+	pRez.h.c=0xC1;
+	pRez.h.headcode=0x32;
+	pRez.h.size=16;
+	DataSend(Index,(LPBYTE)&pRez,pRez.h.size);
+}
 
 void Moss::LoadMoss()
 {
@@ -54,7 +70,7 @@ void Moss::LoadMoss()
 	MossConfig.RandSkill		= Config.GetInt(0,100,50,"Random","RandSkill",RMSTMossGambler);
 	MossConfig.RandAncient		= Config.GetInt(0,100,20,"Random","RandAncient",RMSTMossGambler);
 	moss.LoadItemInfo();
-	if (MossConfig.EnableTimer) moss.LoadTimeConfig();  
+	if (MossConfig.EnableTimer) moss.LoadTimeConfig();
 }
 
 void Moss::LoadItemInfo()
@@ -260,12 +276,6 @@ BOOL Moss::BuyItem(int aIndex, unsigned char * aRecv)
 	if (aRecv[3] == 4 )  BuyType = 2;
 	if (aRecv[3] == 6 )  BuyType = 4;
 	if (aRecv[3] == 24 ) BuyType = 5;
-	/*Снимаем зен*/
-	gObj->Money -= MossConfig.PriceZen;
-	GCMoneySend(gObj->m_Index,gObj->Money);
-
-	if(MossConfig.PricePCPoint > 0) PCPoint.UpdatePoints(gObj,MossConfig.PricePCPoint,PC_DEL,PCPOINT);
-	if(MossConfig.PriceWCoin > 0)   PCPoint.UpdatePoints(gObj,MossConfig.PriceWCoin  ,PC_DEL,WCOIN);
 
 	int Index = rand()%OrderItems[BuyType];
 	int Type = ITEMGET(BuyType,ItemInfo[BuyType][Index].Index);
@@ -293,6 +303,11 @@ BOOL Moss::BuyItem(int aIndex, unsigned char * aRecv)
 
 	if (NewOption > 0)
 		Chat.Message(gObj->m_Index,"[Moss The Gambler] Congratulations, you are very lucky!!!");
+
+	gObj->Money -= MossConfig.PriceZen;
+	GCMoneySend(gObj->m_Index,gObj->Money);
+	if(MossConfig.PricePCPoint > 0) PCPoint.UpdatePoints(gObj,MossConfig.PricePCPoint,PC_DEL,PCPOINT);
+	if(MossConfig.PriceWCoin > 0)   PCPoint.UpdatePoints(gObj,MossConfig.PriceWCoin  ,PC_DEL,WCOIN);
 
 	_beginthread(MossBuyDelay,0,0);
 	return TRUE;
