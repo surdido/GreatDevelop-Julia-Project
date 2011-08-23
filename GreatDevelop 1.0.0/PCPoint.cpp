@@ -62,7 +62,7 @@ void cPCPoint::LoadConfigs()
 		}
 		if (shBuff == 1)
 		{
-			sscanf(szBuf,"%d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d",&PCShop[Counter].Index,&PCShop[Counter].ID,
+			sscanf(szBuf,"%d %d %d %d %d %d %d %d %d %d %d %d %d %d",&PCShop[Counter].Index,&PCShop[Counter].ID,
 				&PCShop[Counter].Level,&PCShop[Counter].Opt,&PCShop[Counter].Luck,&PCShop[Counter].Skill,
 				&PCShop[Counter].Exc,&PCShop[Counter].Ancient,&PCShop[Counter].NewOpt1,&PCShop[Counter].NewOpt2,
 				&PCShop[Counter].NewOpt3,&PCShop[Counter].NewOpt4,&PCShop[Counter].NewOpt5,&PCShop[Counter].Cost);
@@ -148,7 +148,7 @@ void cPCPoint::OpenShop(int Index)
 	if (this->ChekingCallInitItemsInShop == false)
 		this->InitItemShop();
 	DataSend(Index,this->PCPointPacket,this->PacketSizes);
-	Chat.Message(Index,"Quickly Open Shop"); //Очень странный фикс, но он работает :))))))))
+	Chat.Message(Index,""); //Очень странный фикс, но он работает :))))))))
 }
 
 int cPCPoint::gObjCalcItems(int X, int Y)
