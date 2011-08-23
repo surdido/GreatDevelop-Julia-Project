@@ -121,7 +121,7 @@
 #define RMSTPets			"..\\RMST\\Pets.ini" 
 #define RMSTPcPoints		"..\\RMST\\PCPoints_WCoins.dat" 
 #define RMSTMossGambler		"..\\RMST\\MossGambler.ini"
-#define RMSTEventTime		"..\\RMST\\EventTime.dat"
+#define RMSTEventTime		"..\\RMST\\EventTimer.dat"
 #define RMSTChatLogs		"..\\RMST\\ChatLogs"
 #define RMSTConsoleLogs		"..\\RMST\\ConsoleLogs" 
 #define RMSTLog				".\\Log" 

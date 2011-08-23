@@ -170,7 +170,8 @@ void Moss::CheckTime()
 	min = t.GetMinute();
 	hour = t.GetHour();
 
-	this->DisappearMoss();
+	if (this->OpenedMoss == FALSE)
+		this->DisappearMoss();
 
 	if (t.GetSecond() == 0)
 	{
