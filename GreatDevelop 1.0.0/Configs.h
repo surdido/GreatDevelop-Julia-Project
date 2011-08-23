@@ -101,6 +101,9 @@
 #define GCLevelUpMsgSend ((void(*)(int, unsigned char)) 0x0043EE00)
 #define CGLevelUpPointAdd ((int(*)(BYTE * Arg1,DWORD PlayerID)) 0x00407CED)
 #define gObjLevelUpPointAdd ((bool(*)(BYTE type, OBJECTSTRUCT* lpObj)) 0x0051F9A0) 
+#define ItemGetDurability ((int(*)(short index, int itemLevel, int ExellentItem, int SetItem)) 0x0056BBA0) //moss
+#define GSItemGetSize		((void(*) (int index, int & width, int & height)) 0x0056BB00 )
+#define GSCheckInventoryEmptySpace ((int(*) (LPOBJ lpObj, int iItemHeight, int iItemWidth)) 0x0052EE50 )
 #endif
 
 

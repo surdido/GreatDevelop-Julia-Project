@@ -180,8 +180,7 @@ void cProtoFunc::PlayerConnect(LPOBJ gObj)
 {	
 	LoginMsg(gObj);
 	RingSkin(gObj);
-	PCPoint.InitPCPointForPlayer(gObj);
-	//PointShop.GetInfo(gObj->m_Index); 
+	PCPoint.InitPCPointForPlayer(gObj); 
 	MySQL.Execute("SELECT %s FROM Character WHERE Name = '%s'", Config.ResetColumn, gObj->Name);	 
 	AddTab[gObj->m_Index].Resets = MySQL.GetInt();
 	#ifdef _GS 
