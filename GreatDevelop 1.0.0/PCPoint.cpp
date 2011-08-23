@@ -42,25 +42,28 @@ void cPCPoint::LoadConfigs()
 	}
 
 	char szBuf[256];
-	short shBuff = 0;
+	int shBuff = -1;
 	short Counter = 0;
 
 	while (!feof(file))
 	{
 		fgets(szBuf,256,file);
 
-		if (!strncmp(szBuf,"//",strlen("//")) || !strncmp(szBuf,"end",strlen("end")) || szBuf[0] == 0xA ) continue;
+		if (!strncmp(szBuf,"//",strlen("//"))) continue;
 
-		char Order[2];
-		sprintf(Order,"%d",shBuff);
-
-		if(!strncmp(szBuf,Order,strlen(Order))) 
+		if( !strncmp(szBuf,"end",strlen("end")))
 		{
-			shBuff++;
+			shBuff = -1;
+			continue;
+		}
+
+		if(shBuff == -1 && strlen(szBuf) < 3)
+		{
+			sscanf(szBuf,"%d",&shBuff);
 			Counter = 0;
 			continue;
 		}
-		if (shBuff == 1)
+		if (shBuff == 0)
 		{
 			sscanf(szBuf,"%d %d %d %d %d %d %d %d %d %d %d %d %d %d",&PCShop[Counter].Index,&PCShop[Counter].ID,
 				&PCShop[Counter].Level,&PCShop[Counter].Opt,&PCShop[Counter].Luck,&PCShop[Counter].Skill,
@@ -69,12 +72,12 @@ void cPCPoint::LoadConfigs()
 			if (Counter  >= 119) continue;
 			AmountRecords[0] = ++Counter;
 		}
-		if (shBuff == 2)
+		if (shBuff == 1)
 		{
 			sscanf(szBuf,"%d %d",&PCMonsters[Counter].MobID,&PCMonsters[Counter].PCPoints);
 			AmountRecords[1] = ++Counter;
 		}
-		if (shBuff == 3)
+		if (shBuff == 2)
 		{
 			sscanf(szBuf,"%d %d",&WCoinMonsters[Counter].MobID,&WCoinMonsters[Counter].WCoins);
 			AmountRecords[2] = ++Counter;
@@ -264,7 +267,7 @@ void cPCPoint::RewardsPointsKillMob(LPOBJ gObj,LPOBJ mObj,eTypePoint Type)
 				{
 					this->UpdatePoints(gObj,PCMonsters[i].PCPoints,PC_ADD,Type);
 					if (AddTab[gObj->m_Index].PC_PlayerPoints >= sPoints.MaximumPCPoints)
-						Chat.Message(gObj->m_Index,"[PCPoint] You have maximum PCPoints",PCMonsters[i].PCPoints);
+						Chat.Message(gObj->m_Index,"[PCPoint] You have maximum PCPoints");
 					else
 						Chat.Message(gObj->m_Index,"[PCPoint] You earned %d PCPoints",PCMonsters[i].PCPoints);
 					return;
@@ -278,9 +281,9 @@ void cPCPoint::RewardsPointsKillMob(LPOBJ gObj,LPOBJ mObj,eTypePoint Type)
 				{
 					this->UpdatePoints(gObj,WCoinMonsters[i].WCoins,PC_ADD,Type);
 					if (gObj->m_wCashPoint >= sPoints.MaximumWCPoints)
-						Chat.Message(gObj->m_Index,"[WCoin] You have maximum WCoins",PCMonsters[i].PCPoints);
+						Chat.Message(gObj->m_Index,"[WCoin] You have maximum WCoins");
 					else
-						Chat.Message(gObj->m_Index,"[WCoin] You earned %d WCoins",PCMonsters[i].PCPoints);
+						Chat.Message(gObj->m_Index,"[WCoin] You earned %d WCoins",WCoinMonsters[i].WCoins);
 					return;
 				}
 				return;
