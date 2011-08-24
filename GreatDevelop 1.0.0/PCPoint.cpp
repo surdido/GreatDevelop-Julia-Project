@@ -96,7 +96,7 @@ void cPCPoint::CreatePacketShop()
 	int Size       = 0;
 	BYTE Packet1[11] = {0xC1, 0x05, 0xD0, 0x06, 0x00, 0xC2, 0x00, 0x36, 0x31, HIBYTE(AmountRecords[0]), LOBYTE(AmountRecords[0])};
 	BYTE Packet2[4680];
-
+#pragma warning(disable: 4244)
 	for (int i = 0; i < AmountRecords[0]; i++)
 	{
 		BYTE ItemInfo[13];

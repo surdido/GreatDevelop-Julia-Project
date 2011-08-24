@@ -7,8 +7,8 @@
 #include "StdAfx.h"
 #include "Logger.h"
 #include "Utilits.h"
+#include "Configs.h"
 
-#define RMSTDropSystem "..\\RMST\\DropSystem.ini"
 #define ITEMGET(x,y) ((x)*512+(y))
 
 cDropSystem DropSystem;
