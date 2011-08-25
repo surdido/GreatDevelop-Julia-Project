@@ -1,0 +1,44 @@
+// ========================================================= //
+// # GameServer 1.00.90 : MoveReq.txt			   # //
+// # GreatDevelop 1.0.1 2011		       	    	   # //
+// # http://greatdevelop.ru, http://greatdevelop.ru/forum  # //
+// ========================================================= //
+
+//------------------------------------------------------------------------------//
+//	Map Name 1		Map Name 2		Price	Req.	Gate    //
+//------------------------------------------------------------------------------// 
+1	"Stadium"		"Arena"			3000	50	50 	
+2	"Lorencia"		"Lorencia"		1000	10	17 	
+3	"Noria"			"Noria"			1000	10	27	
+31	"Elbeland"		"Elbeland"		1000	10	267	
+32	"Elbeland2"		"Elbeland2"		2000	10	268	
+33	"Elbeland3"		"Elbeland3"		3000	10	269	
+4	"Devias"		"Devias"		1000	20	22	
+5	"Devias2"		"Devias2"		2000	20	72	
+6	"Devias3"		"Devias3"		2000	20	73	
+8	"Dungeon"		"Dungeon"		3000	30	2	
+9	"Dungeon2"		"Dungeon2"		3000	40	6	
+10	"Dungeon3"		"Dungeon3"		3500	50	10	
+11	"Atlans"		"Atlans"		4000	60	49	
+12	"Atlans2"		"Atlans2"		4000	70	75	
+13	"Atlans3"		"Atlans3"		4500	80	76	
+14	"LostTower"		"LostTower"		5000	50	42	
+15	"LostTower2"		"LostTower2"		5000	50	31	
+16	"LostTower3"		"LostTower3"		5500	50	33	
+17	"LostTower4"		"LostTower4"		5500	60	35	
+18	"LostTower5"		"LostTower5"		5500	60	37	
+19	"LostTower6"		"LostTower6"		6000	70	39	
+20	"LostTower7"		"LostTower7"		6500	70	41	
+21	"Tarkan"		"Tarkan"		7000	140	57	
+22	"Tarkan2"		"Tarkan2"		7500	140	77	
+23	"Icarus"		"Icarus"		9000	170	63	
+24	"ValleyofLoren"		"ValleyofLoren"		5000	100	94	
+25	"Aida"			"Aida"			8000	150	119	
+27	"Aida2"			"Aida2"			8500	150	140	
+28	"Kanturu"		"Kanturu"		10000	200	138	
+29	"Kanturu2"		"Kanturu2"		12000	220	141	
+30	"Kanturu3"		"Kanturu3"		15000	230	139	
+34	"Raklion"		"Raklion"		15000	280	287	
+35	"Calmness"		"Calmness"		15000	400	273	
+36	"Crywolf"		"Crywolf"		15000	300	114	
+37	"Vulcanus"		"Vulcanus"		35000	30	294	

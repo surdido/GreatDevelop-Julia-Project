@@ -1,10 +1,11 @@
 
-/GreatDevelop 1.0.0.opensdf
-/GreatDevelop 1.0.0.sdf
+/GreatDevelop 1.0.x.opensdf
+/GreatDevelop 1.0.x.sdf
 /Debug
 /ipch
-/GreatDevelop 1.0.0/Log
-/GreatDevelop 1.0.0/Configs/RMST/ConsoleLogs
+/GreatDevelop 1.0.x/Log
+/GreatDevelop 1.0.x/Configs/RMST/ConsoleLogs
 /GS_CS
 /GS
-/GreatDevelop 1.0.0.suo
+/GreatDevelop 1.0.x.suo
+/GreatDevelop 1.0.x/Configs/GreatDevelop/ConsoleLogs

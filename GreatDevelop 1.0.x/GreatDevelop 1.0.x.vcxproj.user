@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ShowAllFiles>true</ShowAllFiles>
+    <LocalDebuggerCommand Condition="'$(Configuration)|$(Platform)'=='GS_CS|Win32'">C:/muserver/GameServerCS/GameServerCS.exe</LocalDebuggerCommand>
+    <LocalDebuggerCommand Condition="'$(Configuration)|$(Platform)'=='GS|Win32'">C:/muserver/GameServer/GameServer.exe</LocalDebuggerCommand>
+    <DebuggerFlavor Condition="'$(Configuration)|$(Platform)'=='GS_CS|Win32'">WindowsLocalDebugger</DebuggerFlavor>
+    <DebuggerFlavor Condition="'$(Configuration)|$(Platform)'=='GS|Win32'">WindowsLocalDebugger</DebuggerFlavor>
+    <LocalDebuggerWorkingDirectory Condition="'$(Configuration)|$(Platform)'=='GS_CS|Win32'">C:/muserver/GameServerCS/</LocalDebuggerWorkingDirectory>
+    <LocalDebuggerWorkingDirectory Condition="'$(Configuration)|$(Platform)'=='GS|Win32'">C:/muserver/GameServer/</LocalDebuggerWorkingDirectory>
+    <LocalDebuggerCommandArguments Condition="'$(Configuration)|$(Platform)'=='GS_CS|Win32'">127.0.0.1 55970 127.0.0.1 55960 55919</LocalDebuggerCommandArguments>
+    <LocalDebuggerCommandArguments Condition="'$(Configuration)|$(Platform)'=='GS|Win32'">127.0.0.1 55970 127.0.0.1 55960 55901</LocalDebuggerCommandArguments>
+  </PropertyGroup>
+</Project>

@@ -1,9 +1,0 @@
-// ========================================================= //
-// # GameServer 1.00.90 : IpBlock.txt			   # //
-// # GreatDevelop 1.0.0 2011		       	    	   # //
-// # http://greatdevelop.ru, http://greatdevelop.ru/forum  # //
-// ========================================================= //
-
-//You can use '*' symbol to ban IPs
-86.212.222.*
-end

@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="GS_CS|Win32">
+      <Configuration>GS_CS</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="GS|Win32">
+      <Configuration>GS</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3CCD65B4-231D-4529-AD8D-FF169085EE2E}</ProjectGuid>
+    <RootNamespace>Tornado_Lite_712</RootNamespace>
+    <ProjectName>GreatDevelop 1.0.x</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='GS_CS|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='GS|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='GS_CS|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='GS|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='GS_CS|Win32'">
+    <TargetName>WzAg</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='GS|Win32'">
+    <TargetName>WzAg</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='GS_CS|Win32'">
+    <TargetExt>.dll</TargetExt>
+    <OutDir>C:\MuServer\GameServerCS\</OutDir>
+    <IntDir>$(SolutionDir)$(Configuration)\Temp\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='GS|Win32'">
+    <TargetExt>.dll</TargetExt>
+    <OutDir>C:\MuServer\GameServer\</OutDir>
+    <IntDir>$(SolutionDir)$(Configuration)\Temp\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='GS_CS|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_GS_CS;_WINDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='GS|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_GS;_WINDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AntiAFK.cpp" />
+    <ClCompile Include="ChatCommands.cpp" />
+    <ClCompile Include="Configs.cpp" />
+    <ClCompile Include="DropSystem.cpp" />
+    <ClCompile Include="DuelManager.cpp" />
+    <ClCompile Include="Fixes.cpp" />
+    <ClCompile Include="GMSystem.cpp" />
+    <ClCompile Include="Archer.cpp" />
+    <ClCompile Include="IpBlock.cpp" />
+    <ClCompile Include="Lite.cpp" />
+    <ClCompile Include="Logger.cpp" />
+    <ClCompile Include="Maps.cpp" />
+    <ClCompile Include="Monster.cpp" />
+    <ClCompile Include="MossGambler.cpp" />
+    <ClCompile Include="MoveReq.cpp" />
+    <ClCompile Include="News.cpp" />
+    <ClCompile Include="PCPoint.cpp" />
+    <ClCompile Include="Prodef.cpp" />
+    <ClCompile Include="Protocol.cpp" />
+    <ClCompile Include="SQL.cpp" />
+    <ClCompile Include="User.cpp" />
+    <ClCompile Include="Utilits.cpp" />
+    <ClCompile Include="WzAG.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AntiAFK.h" />
+    <ClInclude Include="Archer.h" />
+    <ClInclude Include="ChatCommands.h" />
+    <ClInclude Include="Configs.h" />
+    <ClInclude Include="DropSystem.h" />
+    <ClInclude Include="DuelManager.h" />
+    <ClInclude Include="Fixes.h" />
+    <ClInclude Include="GMSystem.h" />
+    <ClInclude Include="IpBlock.h" />
+    <ClInclude Include="Logger.h" />
+    <ClInclude Include="Maps.h" />
+    <ClInclude Include="Monster.h" />
+    <ClInclude Include="MossGambler.h" />
+    <ClInclude Include="MoveReq.h" />
+    <ClInclude Include="News.h" />
+    <ClInclude Include="PCPoint.h" />
+    <ClInclude Include="Prodef.h" />
+    <ClInclude Include="Protocol.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="SQL.h" />
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="User.h" />
+    <ClInclude Include="Utilits.h" />
+    <ClInclude Include="WzAG.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Bugs.txt" />
+    <None Include="ChangeLog.txt" />
+    <None Include="Configs\GameServerCS\GameServerCS.ini" />
+    <None Include="Configs\GameServerCS\GMSystem.txt" />
+    <None Include="Configs\GameServerCS\IPBlock.txt" />
+    <None Include="Configs\GameServerCS\News.txt" />
+    <None Include="Configs\GameServer\GameServer.ini" />
+    <None Include="Configs\GameServer\GMSystem.txt" />
+    <None Include="Configs\GameServer\IPBlock.txt" />
+    <None Include="Configs\GameServer\News.txt" />
+    <None Include="Configs\GreatDevelop\AntiAFK.txt" />
+    <None Include="Configs\GreatDevelop\Commands.ini" />
+    <None Include="Configs\GreatDevelop\Common.ini" />
+    <None Include="Configs\GreatDevelop\DropSystem.ini" />
+    <None Include="Configs\GreatDevelop\Events.ini" />
+    <None Include="Configs\GreatDevelop\EventTimer.dat" />
+    <None Include="Configs\GreatDevelop\GoldenArcher.txt" />
+    <None Include="Configs\GreatDevelop\Items.ini" />
+    <None Include="Configs\GreatDevelop\MossGambler.ini" />
+    <None Include="Configs\GreatDevelop\MoveReq.txt" />
+    <None Include="Configs\GreatDevelop\PCPoints_WCoins.dat" />
+    <None Include="Configs\GreatDevelop\Pets.ini" />
+    <None Include="Configs\GreatDevelop\PkClearGuard.ini" />
+    <None Include="Configs\GreatDevelop\Skills.ini" />
+    <None Include="Great Develop 1.0.x ReadMe.txt" />
+    <None Include="TODO.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="resource.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
