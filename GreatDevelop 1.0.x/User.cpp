@@ -18,7 +18,7 @@ bool CheckMaxPoints(BYTE type, OBJECTSTRUCT* lpObj)
 	bool bResult = false;
 
 	int MaxPoints = 32000;
-	if(Config.Use65kStats >= 1)
+	if(Config.Enable65kStats >= 1)
 		MaxPoints = -536;	
 
 	int Stats;

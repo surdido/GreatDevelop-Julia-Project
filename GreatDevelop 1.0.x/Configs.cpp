@@ -386,7 +386,6 @@ void cConfigs::LoadFixes()
 	AllowJohAnc		= GetInt(0, 1, 1, "SpecialItem", "AllowJohAnc", GreatDevelopItems);
 	AllowExeSock	= GetInt(0, 1, 1, "SpecialItem", "AllowExeSock", GreatDevelopItems);
 	MaxLifeOpt		= GetInt(0, 1, 1, "SpecialItem", "MaxLifeOpt", GreatDevelopItems);
-	Use65kStats		= GetInt(0, 1, 0, "AddCommand", "Enable65kStats", GreatDevelopCmd);  
 	CSSkillsOnNOrmal = GetInt(0, 1, 1, "Skills", "CSSkillsOnNOrmal", GreatDevelopSkills);    
 	Enable65kStats	= GetInt(0, 1, 0, "AddCommand",	"Enable65kStats", GreatDevelopCmd);	
 	DumpFile		= GetInt(0, 1, 0, "Dump", "EnableCrashDump",GreatDevelopCommon);

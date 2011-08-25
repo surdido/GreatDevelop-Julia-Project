@@ -1228,7 +1228,7 @@ bool cChat::AddCommands(LPOBJ gObj, char *Msg, int Type)
 
 
 	int MaxPoints = 32000;
-	if(Config.Use65kStats >= 1)
+	if(Config.Enable65kStats >= 1)
 		MaxPoints = -536;	
 
 	int Stats = 0;

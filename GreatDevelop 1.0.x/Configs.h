@@ -122,7 +122,7 @@
 #define GreatDevelopPkClear			"..\\GreatDevelop\\PkClearGuard.ini"
 #define GreatDevelopSkills			"..\\GreatDevelop\\Skills.ini"  
 
-#define GS_CONFIG_FILE		".\\Data\\ServerInfo.dat" 
+#define GS_CONFIG_FILE				".\\Data\\ServerInfo.dat" 
 
 #define GreatDevelopNews			".\\News.txt"
 #define GreatDevelopGM				".\\GMSystem.txt"

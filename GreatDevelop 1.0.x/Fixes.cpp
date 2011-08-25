@@ -366,7 +366,7 @@ void cFixes::ASMFixes()
 	}
 
 // Maximum Stats (65535)
-	if (Config.Use65kStats)
+	if (Config.Enable65kStats)
 	{
 		 Utilits.SetByte(0x004567F3+1,0xB7); 
          Utilits.SetByte(0x004592A2+1,0xB7); 
@@ -1103,7 +1103,7 @@ void cFixes::ASMFixes()
 	// Marder Move;
 	Utilits.SetByte(0x00573CB0, 0x06); 
 
-	if (Config.Use65kStats)
+	if (Config.Enable65kStats)
 	{
 		Utilits.SetByte(0x00458DD3+1,0xB7);
 		Utilits.SetByte(0x0045B982+1,0xB7);
