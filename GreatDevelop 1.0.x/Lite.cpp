@@ -148,7 +148,7 @@ short GOBJGetIndex(SOCKET aSocket, char* ip)
 	return GSGOBJGetIndex(aSocket, ip);
 }
 
-extern "C" __declspec (dllexport) void __cdecl GreatDevelop()
+extern "C" __declspec (dllexport) void __cdecl RMST()
 {
 	DWORD OldProtect;
 	if(VirtualProtect(LPVOID(0x401000), GSSIZE, PAGE_EXECUTE_READWRITE, &OldProtect))
