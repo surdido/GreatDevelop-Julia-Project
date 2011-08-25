@@ -17,14 +17,14 @@ cPCPoint::~cPCPoint() {}
 
 void cPCPoint::LoadIniConfigs()
 {
-	sPoints.MaximumWCPoints		= (short) Config.GetInt(0, 32000,					10000,	"WCoins",		"MaximumWCPoints",			GreatDevelopPcPoints);
+	sPoints.MaximumWCPoints		= Config.GetInt(0, 32000,					10000,	"WCoins",		"MaximumWCPoints",			GreatDevelopPcPoints);
 
-	sPoints.Enabled				= (short) Config.GetInt(0, 1	,					1,		"PCPoints",		"Enabled",					GreatDevelopPcPoints);
+	sPoints.Enabled				= Config.GetInt(0, 1	,					1,		"PCPoints",		"Enabled",					GreatDevelopPcPoints);
 	if (!sPoints.Enabled) return;
 
-	sPoints.MaximumPCPoints		= (short) Config.GetInt(0, 32000,					10000,	"PCPoints",		"MaximumPCPoints",			GreatDevelopPcPoints);
-	sPoints.AddPCPointsSec		= (short) Config.GetInt(0, 6000000,					3600,	"PCPoints",		"AddPCPointsSec",			GreatDevelopPcPoints);
-	sPoints.AddPCPointsCount	= (short) Config.GetInt(0, sPoints.MaximumPCPoints,	10,		"PCPoints",		"AddPCPointsCount",			GreatDevelopPcPoints);	
+	sPoints.MaximumPCPoints		= Config.GetInt(0, 32000,					10000,	"PCPoints",		"MaximumPCPoints",			GreatDevelopPcPoints);
+	sPoints.AddPCPointsSec		= Config.GetInt(0, 6000000,					3600,	"PCPoints",		"AddPCPointsSec",			GreatDevelopPcPoints);
+	sPoints.AddPCPointsCount	= Config.GetInt(0, sPoints.MaximumPCPoints,	10,		"PCPoints",		"AddPCPointsCount",			GreatDevelopPcPoints);	
 	this->LoadConfigs();
 }
 

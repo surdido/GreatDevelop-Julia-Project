@@ -47,9 +47,6 @@
     <Filter Include="Source\News">
       <UniqueIdentifier>{8e1ea7be-a02a-4891-a9f4-c605bc1a4955}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source\MoveReq">
-      <UniqueIdentifier>{eb7e0432-e3e5-4203-9a15-136648b86545}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source\Golden Archer">
       <UniqueIdentifier>{e8482d39-753c-4591-b15c-ef3cd5ca6643}</UniqueIdentifier>
     </Filter>
@@ -87,6 +84,9 @@
     </Filter>
     <Filter Include="Configs\GreatDevelop">
       <UniqueIdentifier>{bfddddc1-3c81-42a5-9b8a-cb833e1ae3da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\MoveReq">
+      <UniqueIdentifier>{eb7e0432-e3e5-4203-9a15-136648b86545}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

@@ -34,11 +34,11 @@ public:
 
 	struct  
 	{
-		short Enabled;
-		short MaximumPCPoints;
-		short AddPCPointsSec;
-		short AddPCPointsCount;
-		short MaximumWCPoints;
+		int Enabled;
+		int MaximumPCPoints;
+		int AddPCPointsSec;
+		int AddPCPointsCount;
+		int MaximumWCPoints;
 		//short AddPCPointsMinLvl;
 		//short AddPCPointsLevelUP;   
 	}sPoints;
