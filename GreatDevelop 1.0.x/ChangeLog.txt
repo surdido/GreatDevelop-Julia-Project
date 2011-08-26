@@ -1,13 +1,15 @@
 // ========================================================= //
 // # GameServer 1.00.90 : ChangeLog.txt		    	   # //
 // # GreatDevelop 1.0.1 2011		       	    	   # //
-// # http://greatdevelop.ru, http://greatdevelop.ru/forum  # //
+// # http://greatdevelop.ru, http://greatgame.su	   # //
 // ========================================================= //
 
 Great Develop 1.0.1
 
+	[Configs] All configs updated
 	[GS\GSCS] Drop System rewriten
 	[GS\GSCS] Golden Archer rewriten and fixed
+	[GS\GSCS] PcPoint fix
 	[GS] Moss rewriten
 
 Great Develop 1.0.0
@@ -21,7 +23,7 @@ Great Develop 1.0.0
 	[GS\GSCS] Setzen command added
 
 
-RMST Lite 7.10.Build1->Buid2
+RMST Lite 7.10.Build2
 
 	[GS] ADDED Offlike Moss The Gambler
 	[GS\GSCS] Ware command ADDED
