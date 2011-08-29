@@ -103,7 +103,7 @@ bool cDropSystem::DropItem(LPOBJ mObj,LPOBJ pObj)
 	int Level,Skill,Luck,Opt,Exc,Group,Index;
 
 	Group	= ItemsDrop[mObj->Class][RateArrayItem[RandomItem]].Group;
-	Index	= ItemsDrop[mObj->Class][RateArrayItem[RandomItem]].Group;
+	Index	= ItemsDrop[mObj->Class][RateArrayItem[RandomItem]].Index;
 	Level	= ItemsDrop[mObj->Class][RateArrayItem[RandomItem]].Level;
 	Opt		= ItemsDrop[mObj->Class][RateArrayItem[RandomItem]].Option;
 	Luck	= ItemsDrop[mObj->Class][RateArrayItem[RandomItem]].Luck;
