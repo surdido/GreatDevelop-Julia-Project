@@ -162,36 +162,35 @@ void cConfigs::LoadConfigsInGS()
 	*(unsigned int*) GS_KUNDUN_ANC_PERCT = GetInt(0,10000,25,"Kundun","KundunDropAncRate",GreatDevelopItems);
 	*(unsigned char*) GS_KUNDUN_ITEM_NUMB = GetChar(0,20,3,"Kundun","KundunDropItemCount",GreatDevelopItems);
 
-	*(unsigned char*) GS_CCPLAYER = GetChar(0,20,2,"ChaosCastle","ChaosCastleMinPlayers",GreatDevelopEvents);
-	
-	*(unsigned char*) GS_CCREWARD1 = GetChar(0,15,14,"ChaosCastle","ChaosCastleRewardType1IndexID",GreatDevelopEvents) * 512 + GetChar(0,255,16,"ChaosCastle","ChaosCastleRewardType1GroupID",GreatDevelopEvents);
-	*(unsigned char*) GS_CCREWARD2 = GetChar(0,15,14,"ChaosCastle","ChaosCastleRewardType1IndexID",GreatDevelopEvents) * 512 + GetChar(0,255,13,"ChaosCastle","ChaosCastleRewardType1GroupID",GreatDevelopEvents);
-	*(unsigned char*) GS_CCREWARD3 = GetChar(0,15,14,"ChaosCastle","ChaosCastleRewardType1IndexID",GreatDevelopEvents) * 512 + GetChar(0,255,22,"ChaosCastle","ChaosCastleRewardType1GroupID",GreatDevelopEvents);
-	*(unsigned char*) GS_CCREWARD4 = GetChar(0,15,14,"ChaosCastle","ChaosCastleRewardType1IndexID",GreatDevelopEvents) * 512 + GetChar(0,255,14,"ChaosCastle","ChaosCastleRewardType1GroupID",GreatDevelopEvents); 
-	
+	*(unsigned char*) GS_CCPLAYER = GetChar(0,20,2,"ChaosCastle","ChaosCastleMinPlayers",GreatDevelopEvents); 
 
-	*(unsigned char*) GS_ITPLAYER = GetChar(0,20,4,"IllusionTemple","ItMinPlayers",GreatDevelopEvents);
-	
-	*(unsigned char*) GS_IT_DROP_ID = GetChar(0,15,15,"IllusionTemple","ItDropID",GreatDevelopEvents);
-	*(unsigned char*) GS_IT_GROUP_ID = GetChar(0,255,12,"IllusionTemple","ItDropGroup",GreatDevelopEvents);
+	*(unsigned char*) GS_CCREWARD1 = GetChar(0,15,14,"ChaosCastle","ChaosCastleRewardType1GroupID",GreatDevelopEvents) * 512 + GetChar(0,255,16,"ChaosCastle","ChaosCastleRewardType1IndexID",GreatDevelopEvents);
+	*(unsigned char*) GS_CCREWARD2 = GetChar(0,15,14,"ChaosCastle","ChaosCastleRewardType2GroupID",GreatDevelopEvents) * 512 + GetChar(0,255,13,"ChaosCastle","ChaosCastleRewardType2IndexID",GreatDevelopEvents);
+	*(unsigned char*) GS_CCREWARD3 = GetChar(0,15,14,"ChaosCastle","ChaosCastleRewardType3GroupID",GreatDevelopEvents) * 512 + GetChar(0,255,22,"ChaosCastle","ChaosCastleRewardType3IndexID",GreatDevelopEvents);
+	*(unsigned char*) GS_CCREWARD4 = GetChar(0,15,14,"ChaosCastle","ChaosCastleRewardType4GroupID",GreatDevelopEvents) * 512 + GetChar(0,255,14,"ChaosCastle","ChaosCastleRewardType4IndexID",GreatDevelopEvents); 
+
+
+	*(unsigned char*) GS_ITPLAYER = GetChar(0,20,4,"IllusionTemple","ItMinPlayers",GreatDevelopEvents); 
+	*(unsigned char*) GS_IT_GROUP_ID = GetChar(0,15,15,"IllusionTemple","ItDropGroup",GreatDevelopEvents);
+	*(unsigned char*) GS_IT_DROP_ID = GetChar(0,255,12,"IllusionTemple","ItDropID",GreatDevelopEvents); 
 	*(unsigned char*) GS_IT_ITEM_LVL = GetChar(0,15,0,"IllusionTemple","ItDropLevel",GreatDevelopEvents);
 	*(unsigned char*) GS_IT_ITEM_SKL =  GetChar(0,1,0,"IllusionTemple","ItDropWithSkill",GreatDevelopEvents);
 	*(unsigned char*) GS_IT_ITEM_LCK = GetChar(0,1,0,"IllusionTemple","ItDropWithLuck",GreatDevelopEvents);
 	*(unsigned char*) GS_IT_ITEM_LIF = GetChar(0,7,0,"IllusionTemple","ItDropLifeAdd",GreatDevelopEvents);
 	*(unsigned char*) GS_IT_ITEM_EXC = GetChar(0,63,0,"IllusionTemple","ItDropExcOpt",GreatDevelopEvents);
-	*(unsigned char*) GS_IT_ITEM_ANC = GetChar(0,255,0,"IllusionTemple","ItDropAncOpt",GreatDevelopEvents);
+	*(unsigned char*) GS_IT_ITEM_ANC = GetChar(0,255,0,"IllusionTemple","ItDropAncOpt",GreatDevelopEvents); 
 
-	*(unsigned char *) GS_BC_DROP_ID = GetChar(0,15,15,"BloodCastle","BcDropID",GreatDevelopEvents);
-	*(unsigned char *) GS_BC_DROP_GROUP = GetChar(0,255,12,"BloodCastle","BcDropGroup",GreatDevelopEvents);
+	*(unsigned char *) GS_BC_DROP_GROUP = GetChar(0,15,15,"BloodCastle","BcDropGroup",GreatDevelopEvents);
+	*(unsigned char *) GS_BC_DROP_ID = GetChar(0,255,12,"BloodCastle","BcDropID",GreatDevelopEvents);
 	*(unsigned char *) GS_BC_ITEM_LVL = GetChar(0,15,0,"BloodCastle","BcDropLevel",GreatDevelopEvents);
 	*(unsigned char *) GS_BC_ITEM_SKL = GetChar(0,1,0,"BloodCastle","BcDropWithSkill",GreatDevelopEvents);
 	*(unsigned char *) GS_BC_ITEM_LCK = GetChar(0,1,0,"BloodCastle","BcDropWithLuck",GreatDevelopEvents);
 	*(unsigned char *) GS_BC_ITEM_LIF = GetChar(0,7,0,"BloodCastle","BcDropLifeAdd",GreatDevelopEvents);
 	*(unsigned char *) GS_BC_ITEM_EXC = GetChar(0,63,0,"BloodCastle","BcDropExcOpt",GreatDevelopEvents);
-	*(unsigned char *) GS_BC_ITEM_ANC = GetChar(0,255,0,"BloodCastle","BcDropAncOpt",GreatDevelopEvents);
+	*(unsigned char *) GS_BC_ITEM_ANC = GetChar(0,255,0,"BloodCastle","BcDropAncOpt",GreatDevelopEvents); 
 
-	*(unsigned char *) GS_WW_DROP_ID = GetChar(0,15,13,"WhiteWizard","WizardDropItemID",GreatDevelopEvents);
-	*(unsigned char *) GS_WW_GROUP_ID = GetChar(0,255,20,"WhiteWizard","WizardDropGroup",GreatDevelopEvents);
+	*(unsigned char *) GS_WW_GROUP_ID = GetChar(0,15,13,"WhiteWizard","WizardDropGroup",GreatDevelopEvents);
+	*(unsigned char *) GS_WW_DROP_ID = GetChar(0,255,20,"WhiteWizard","WizardDropItemID",GreatDevelopEvents);
 	*(unsigned char *) GS_WW_ITEM_LVL = GetChar(0,15,0,"WhiteWizard","WizardDropLevel",GreatDevelopEvents);
 	*(unsigned char *) GS_WW_ITEM_SKL = GetChar(0,1,0,"WhiteWizard","WizardDropWithSkill",GreatDevelopEvents);
 	*(unsigned char *) GS_WW_ITEM_LCK = GetChar(0,1,0,"WhiteWizard","WizardDropWithLuck",GreatDevelopEvents);

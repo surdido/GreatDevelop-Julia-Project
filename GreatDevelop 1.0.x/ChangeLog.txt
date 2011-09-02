@@ -4,6 +4,9 @@
 // # http://greatdevelop.ru, http://greatgame.su	   # //
 // ========================================================= //
 
+Great Develop 1.0.2
+	[GS]Event.ini Fully Fixed
+
 Great Develop 1.0.1
 
 	[Configs] All configs updated
