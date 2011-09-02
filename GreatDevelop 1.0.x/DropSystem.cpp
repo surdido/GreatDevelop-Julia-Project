@@ -43,7 +43,7 @@ void cDropSystem::LoadDropItems()
 			int n[10];
 			sscanf(zBuf,"%d %d %d %d %d %d %d %d %d %d", &n[0], &n[1], &n[2], &n[3], &n[4], &n[5], &n[6], &n[7], &n[8], &n[9]);
 			int MobId = n[0];
-			int j = ArrayMaxItem[MobId];
+			int j = MobId == -1 ? 559 : ArrayMaxItem[MobId];
 			ItemsDrop[MobId][j].Map			= n[1];
 			ItemsDrop[MobId][j].RateItem	= n[2];
 			ItemsDrop[MobId][j].Group		= n[3];
@@ -64,14 +64,14 @@ void cDropSystem::LoadDropItems()
 
 bool cDropSystem::DropItem(LPOBJ mObj,LPOBJ pObj)
 {
-	if(ArrayMaxItem[mObj->Class] == 0) return false;
+	int mClass = ArrayMaxItem[mObj->Class] == 0 ? 559 : mObj->Class;
 
 	short MapArrayItem[MAX_ITEM_FOR_MONSTER];
 	short CountArrayItem = 0;
 
-	for(int i = 0; i < ArrayMaxItem[mObj->Class]; i++)
+	for(int i = 0; i < ArrayMaxItem[mClass]; i++)
 	{
-		if(ItemsDrop[mObj->Class][i].Map == mObj->MapNumber)
+		if(ItemsDrop[mClass][i].Map == mObj->MapNumber || ItemsDrop[mClass][i].Map == -1)
 		{
 			MapArrayItem[CountArrayItem] = i;
 			CountArrayItem++;
@@ -89,7 +89,7 @@ bool cDropSystem::DropItem(LPOBJ mObj,LPOBJ pObj)
 
 	for(int j = 0; j < CountArrayItem; j++)
 	{
-		if(ItemsDrop[mObj->Class][MapArrayItem[j]].RateItem >= RandomValue)
+		if(ItemsDrop[mClass][MapArrayItem[j]].RateItem >= RandomValue)
 		{
 			RateArrayItem[CountRateItem] = MapArrayItem[j];
 			CountRateItem++;
@@ -102,13 +102,13 @@ bool cDropSystem::DropItem(LPOBJ mObj,LPOBJ pObj)
 
 	int Level,Skill,Luck,Opt,Exc,Group,Index;
 
-	Group	= ItemsDrop[mObj->Class][RateArrayItem[RandomItem]].Group;
-	Index	= ItemsDrop[mObj->Class][RateArrayItem[RandomItem]].Index;
-	Level	= ItemsDrop[mObj->Class][RateArrayItem[RandomItem]].Level;
-	Opt		= ItemsDrop[mObj->Class][RateArrayItem[RandomItem]].Option;
-	Luck	= ItemsDrop[mObj->Class][RateArrayItem[RandomItem]].Luck;
-	Skill	= ItemsDrop[mObj->Class][RateArrayItem[RandomItem]].Skill; 
-	Exc		= ItemsDrop[mObj->Class][RateArrayItem[RandomItem]].Exc;
+	Group	= ItemsDrop[mClass][RateArrayItem[RandomItem]].Group;
+	Index	= ItemsDrop[mClass][RateArrayItem[RandomItem]].Index;
+	Level	= ItemsDrop[mClass][RateArrayItem[RandomItem]].Level;
+	Opt		= ItemsDrop[mClass][RateArrayItem[RandomItem]].Option;
+	Luck	= ItemsDrop[mClass][RateArrayItem[RandomItem]].Luck;
+	Skill	= ItemsDrop[mClass][RateArrayItem[RandomItem]].Skill; 
+	Exc		= ItemsDrop[mClass][RateArrayItem[RandomItem]].Exc;
 
 	int Item = ITEMGET(Group,Index);
 
