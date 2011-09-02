@@ -42,8 +42,8 @@ void cDropSystem::LoadDropItems()
 		{
 			int n[10];
 			sscanf(zBuf,"%d %d %d %d %d %d %d %d %d %d", &n[0], &n[1], &n[2], &n[3], &n[4], &n[5], &n[6], &n[7], &n[8], &n[9]);
-			int MobId = n[0];
-			int j = MobId == -1 ? 559 : ArrayMaxItem[MobId];
+			int MobId = n[0] == -1 ? 559 : n[0];
+			int j = ArrayMaxItem[MobId];
 			ItemsDrop[MobId][j].Map			= n[1];
 			ItemsDrop[MobId][j].RateItem	= n[2];
 			ItemsDrop[MobId][j].Group		= n[3];
