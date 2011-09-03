@@ -23,6 +23,8 @@ private:
 	struct
 	{
 		short Map;
+		short MinLvl;
+		short MaxLvl;
 		short Group;
 		short Index;
 		short RateItem;

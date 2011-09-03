@@ -40,19 +40,21 @@ void cDropSystem::LoadDropItems()
 
 		if (flag)
 		{
-			int n[10];
-			sscanf(zBuf,"%d %d %d %d %d %d %d %d %d %d", &n[0], &n[1], &n[2], &n[3], &n[4], &n[5], &n[6], &n[7], &n[8], &n[9]);
+			int n[12];
+			sscanf(zBuf,"%d %d %d %d %d %d %d %d %d %d %d %d", &n[0], &n[1], &n[2], &n[3], &n[4], &n[5], &n[6], &n[7], &n[8], &n[9], &n[10], &n[11]);
 			int MobId = n[0] == -1 ? 559 : n[0];
 			int j = ArrayMaxItem[MobId];
 			ItemsDrop[MobId][j].Map			= n[1];
-			ItemsDrop[MobId][j].RateItem	= n[2];
-			ItemsDrop[MobId][j].Group		= n[3];
-			ItemsDrop[MobId][j].Index		= n[4];
-			ItemsDrop[MobId][j].Level		= n[5];
-			ItemsDrop[MobId][j].Option		= n[6];
-			ItemsDrop[MobId][j].Skill		= n[7];
-			ItemsDrop[MobId][j].Luck		= n[8];
-			ItemsDrop[MobId][j].Exc			= n[9];
+			ItemsDrop[MobId][j].MinLvl		= n[2];
+			ItemsDrop[MobId][j].MaxLvl		= n[3];
+			ItemsDrop[MobId][j].RateItem	= n[4];
+			ItemsDrop[MobId][j].Group		= n[5];
+			ItemsDrop[MobId][j].Index		= n[6];
+			ItemsDrop[MobId][j].Level		= n[7];
+			ItemsDrop[MobId][j].Option		= n[8];
+			ItemsDrop[MobId][j].Skill		= n[9];
+			ItemsDrop[MobId][j].Luck		= n[10];
+			ItemsDrop[MobId][j].Exc			= n[11];
 			
 			ArrayMaxItem[MobId] = ++j;
 		}
@@ -68,6 +70,8 @@ bool cDropSystem::DropItem(LPOBJ mObj,LPOBJ pObj)
 
 	short MapArrayItem[MAX_ITEM_FOR_MONSTER];
 	short CountArrayItem = 0;
+	short LvlArrayItem[MAX_ITEM_FOR_MONSTER];
+	short CountLvlArrayItem = 0;
 
 	for(int i = 0; i < ArrayMaxItem[mClass]; i++)
 	{
@@ -80,6 +84,17 @@ bool cDropSystem::DropItem(LPOBJ mObj,LPOBJ pObj)
 
 	if(CountArrayItem == 0) return false;
 
+	for(int j = 0; j < CountArrayItem; j++)
+	{
+		if((ItemsDrop[mClass][MapArrayItem[j]].MinLvl <= mObj->Level && ItemsDrop[mClass][MapArrayItem[j]].MaxLvl >= mObj->Level) || ItemsDrop[mClass][MapArrayItem[j]].MaxLvl == 0)
+		{
+			LvlArrayItem[CountLvlArrayItem] = MapArrayItem[j];
+			CountLvlArrayItem++;
+		}
+	}
+
+	if(CountLvlArrayItem == 0) return false;
+
 	srand(GetTickCount());
 
 	int RandomValue = rand() % 100 + 1;
@@ -87,11 +102,11 @@ bool cDropSystem::DropItem(LPOBJ mObj,LPOBJ pObj)
 	short RateArrayItem[MAX_ITEM_FOR_MONSTER];
 	short CountRateItem = 0;
 
-	for(int j = 0; j < CountArrayItem; j++)
+	for(int f = 0; f < CountLvlArrayItem; f++)
 	{
-		if(ItemsDrop[mClass][MapArrayItem[j]].RateItem >= RandomValue)
+		if(ItemsDrop[mClass][LvlArrayItem[f]].RateItem >= RandomValue)
 		{
-			RateArrayItem[CountRateItem] = MapArrayItem[j];
+			RateArrayItem[CountRateItem] = LvlArrayItem[f];
 			CountRateItem++;
 		}
 	}
