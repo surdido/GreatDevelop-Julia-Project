@@ -97,7 +97,7 @@ bool cDropSystem::DropItem(LPOBJ mObj,LPOBJ pObj)
 
 	srand(GetTickCount());
 
-	int RandomValue = rand() % 100 + 1;
+	int RandomValue = rand() % 1000 + 1;
 
 	short RateArrayItem[MAX_ITEM_FOR_MONSTER];
 	short CountRateItem = 0;
